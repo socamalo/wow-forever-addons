@@ -1,0 +1,21 @@
+## Interface: 16001
+## Title: Daniel 背包管家
+## Notes: 自动卖垃圾/红装/分类整理/换装/补弹药；任务状态导出；agent 地图标记；本地 MCP
+## Author: Daniel
+## Version: 1.10.1
+## SavedVariables: DanielAddonDB
+## AddonCompartmentFunc: DanielAddon_CompartmentClick
+## IconTexture: Interface\Icons\INV_Misc_Coin_02
+
+Core.lua
+Log.lua
+MarkerCore.lua
+Markers.lua
+State.lua
+Sell.lua
+Ammo.lua
+Repair.lua
+Sort.lua
+Upgrade.lua
+Highlight.lua
+UI.lua

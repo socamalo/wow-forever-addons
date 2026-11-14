@@ -1,0 +1,176 @@
+-- 内置升级指引数据（版本化，预留 1.60.1 forever 方案）。
+-- 普通制造路线存 itemID，附魔等施法型专业存 spellID 与数量：配方与物品名称
+-- 一律以游戏客户端为准（zhCN/zhTW/enUS 指引页面文字不同，按 ID 匹配才不会显示错名字）。text 保留 wow.gg 指引的
+-- 操作说明（简体中文原文），界面悬停行即可阅读。
+-- 来源：wow.gg Midnight 专业升级指引（见各路由 source）。
+local addonName, ns = ... -- luacheck: ignore addonName
+
+local Guides = {}
+ns.LevelingGuides = Guides
+
+-- version: midnight = 12.1 现行资料片；forever（1.60.1）预留。
+Guides.version = "midnight"
+Guides.versions = { midnight = true, forever = false }
+
+Guides.routes = {
+  engineering = {
+    covers = 80,
+    steps = {
+      { from = 1, to = 31, itemID = 244752, count = 15,
+        text = "在银月城训练师处学习配方后制作：丹维（43.5, 54.1）或格洛蕾莎（69.3, 84.2），都在银月城。试剂一律选最低品质，品质不影响升级速度。" },
+      { from = 31, to = 40, itemID = 268475, count = 12,
+        text = "制作永恒核心穹铃过渡，消耗永恒核心与废铁堆。" },
+      { from = 40, to = 70, itemID = 244758, count = 30,
+        text = "主力区间：奎尔多雷护腕，材料为废铁堆、柔性线框与永恒核心，一次备足。" },
+      { from = 70, to = 75, itemID = 244757, count = 7,
+        text = "奎尔多雷腕带小幅过渡。" },
+      { from = 75, to = 80, itemID = 244756, count = 12,
+        text = "奎尔多雷护臂收尾。80 以后没有固定路线：挑当前等级的橙色/黄色配方做装备、玩具或装饰品，优先选材料便宜的。" },
+    },
+  },
+  jewelcrafting = {
+    covers = 65,
+    steps = {
+      { from = 1, to = 12, note = "prospect" },
+      { from = 12, to = 15, itemID = 240991, count = 3,
+        text = "制作水晶玻璃瓶，消耗水晶玻璃与暗影石。" },
+      { from = 15, to = 21, itemID = 240855, count = 3,
+        text = "切割翠铬石迅捷宝石；也可换用多彩青金（物品 240879）交替做。" },
+      { from = 21, to = 30, itemID = 240947, count = 3,
+        text = "闪烁铜戒，消耗闪烁铜矿石与暗影石。" },
+      { from = 30, to = 40, itemID = 240948, count = 3,
+        text = "夜色守卫，消耗暗影锡矿石与暗影石。" },
+      { from = 40, to = 50, itemID = 241141, count = 10,
+        text = "独白酒杯，只消耗水晶玻璃。" },
+      { from = 50, to = 57, itemID = 241141, count = 7,
+        text = "继续独白酒杯。" },
+      { from = 57, to = 65, itemID = 241141, count = 12,
+        text = "独白酒杯做到 65。65 之后没有固定路线：做当前等级橙/黄配方装备或装饰品，注意黄色/绿色不保证每次涨点。" },
+    },
+  },
+  enchanting = {
+    covers = 67,
+    steps = {
+      { from = 1, to = 25, note = "disenchant" },
+      { from = 25, to = 35, spellID = 1236074, count = 10,
+        text = "附魔戒指 - 自然之愤，只消耗永歌尘。" },
+      { from = 35, to = 40, spellID = 1236074, count = 6,
+        text = "继续自然之愤。" },
+      { from = 40, to = 52, spellID = 1236489, count = 4,
+        text = "萨拉斯法织者魔杖，消耗永歌尘与辐光碎片。" },
+      { from = 52, to = 55, spellID = 1236058, count = 3,
+        text = "附魔戒指 - 阿曼尼精通。" },
+      { from = 55, to = 60, spellID = 1236058, count = 6,
+        text = "继续阿曼尼精通。" },
+      { from = 60, to = 65, spellID = 1236058, count = 8,
+        text = "阿曼尼精通做到 65。" },
+      { from = 65, to = 67, spellID = 1236070, count = 3,
+        text = "附魔头盔 - 速度祝福收尾。67 之后做橙/黄配方，直到不再涨点。" },
+    },
+  },
+  alchemy = {
+    covers = 50,
+    steps = {
+      { from = 1, to = 6, itemID = 241305, count = 5,
+        text = "银月治疗药水，消耗水晶玻璃瓶与宁静花。" },
+      { from = 6, to = 10, itemID = 241339, count = 4,
+        text = "启迪合剂过渡。" },
+      { from = 10, to = 16, note = "recycle" },
+      { from = 16, to = 30, itemID = 268954, count = 14,
+        text = "熵能萃取物，消耗水晶玻璃瓶、宁静花与启迪合剂。" },
+      { from = 10, to = 50, itemID = 241309, count = 20,
+        text = "与上行区间并行：光之潜能一直做到 50。80 级转黄、90 级转绿，不保证每次涨点；升级途中学习的新药水/药剂首制有额外技能点。" },
+    },
+  },
+  blacksmithing = {
+    covers = 60,
+    steps = {
+      { from = 1, to = 5, itemID = 238197, count = 4,
+        text = "先熔锭：辉铜锭，消耗辉铜矿石与闪光助熔剂。" },
+      { from = 5, to = 11, itemID = 237917, count = 3,
+        text = "血回火护胫，消耗闪光助熔剂与辉铜锭。" },
+      { from = 11, to = 15, itemID = 237917, count = 2,
+        text = "继续血回火护胫。" },
+      { from = 15, to = 21, itemID = 237917, count = 3,
+        text = "血回火护胫做到 21。" },
+      { from = 21, to = 25, itemID = 237919, count = 3,
+        text = "血回火腰带。" },
+      { from = 25, to = 31, itemID = 237923, count = 2,
+        text = "血回火护腕。" },
+      { from = 31, to = 40, itemID = 237925, count = 4,
+        text = "血回火铁手套。" },
+      { from = 40, to = 46, itemID = 237917, count = 3,
+        text = "回到血回火护胫。" },
+      { from = 46, to = 60, itemID = 237929, count = 18,
+        text = "锻造的始源指虎一路做到 60；60 之后做橙/黄配方，并用货币“大师级铁匠的热忱”兑换新配方。" },
+    },
+  },
+  leatherworking = {
+    covers = 67,
+    steps = {
+      { from = 1, to = 10, itemID = 244586, count = 3,
+        text = "强化走私者护腕，消耗虚空韧皮与虚空韧鳞。" },
+      { from = 10, to = 16, itemID = 244585, count = 2,
+        text = "皮制走私者便靴。" },
+      { from = 16, to = 22, itemID = 244587, count = 2,
+        text = "皮制走私者外衣。" },
+      { from = 22, to = 31, itemID = 244595, count = 3,
+        text = "强化走私者腕带。" },
+      { from = 31, to = 37, itemID = 244593, count = 2,
+        text = "强化走私者手套，额外消耗无匹羽饰。" },
+      { from = 37, to = 40, itemID = 244629, count = 3,
+        text = "珠宝学徒围裙，额外消耗银叶线。" },
+      { from = 40, to = 52, itemID = 244592, count = 4,
+        text = "强化走私者护肩，额外消耗穿刺之牙。" },
+      { from = 52, to = 67, itemID = 244591, count = 8,
+        text = "强化走私者兜帽做到 67。67 之后做当前橙/黄配方装备或装饰品。" },
+    },
+  },
+  tailoring = {
+    covers = 60,
+    steps = {
+      { from = 1, to = 15, itemID = 239700, count = 14,
+        text = "先打布卷：闪亮亚麻布卷，消耗银叶线与明亮亚麻。" },
+      { from = 15, to = 21, itemID = 239673, count = 3,
+        text = "宫廷便鞋。" },
+      { from = 21, to = 25, itemID = 239674, count = 2,
+        text = "宫廷斗篷。" },
+      { from = 25, to = 31, itemID = 239668, count = 3,
+        text = "宫廷头罩或宫廷长裤（物品 239676）二选一，消耗捻纹绣线。" },
+      { from = 31, to = 41, itemID = 239672, count = 5,
+        text = "宫廷长袍。" },
+      { from = 41, to = 50, itemID = 239675, count = 7,
+        text = "宫廷肩垫做到 50。" },
+      { from = 50, to = 60, itemID = 240156, count = 10,
+        text = "闪亮亚麻丝线，消耗捻纹绣线与充盈的闪亮亚麻布卷。60 之后做橙/黄配方或布料装饰品。" },
+    },
+  },
+  inscription = {
+    covers = 100,
+    steps = {
+      { from = 1, to = 20, note = "starter" },
+      { from = 20, to = 30, itemID = 245773, count = 7,
+        text = "兽群守卫法杖，消耗萨拉斯吟唱水与阿泽菲特。" },
+      { from = 30, to = 80, itemID = 245757, count = 150,
+        text = "主力区间：萨拉斯铭文论著，消耗铭学家羊皮纸与野魔法微粒/多彩墨水/赭色墨水（约各三分之一）。80 级转黄后可能要多做或少做，材料备足。" },
+      { from = 80, to = 90, itemID = 245757, count = 45,
+        text = "论著转黄，继续做，数量按实际情况增减。" },
+      { from = 90, to = 100, itemID = 245757, count = 75,
+        text = "论著做到 100。全程建议最低品质试剂，品质不影响升级速度。" },
+    },
+  },
+  cooking = {
+    covers = 100,
+    steps = {
+      { from = 1, to = 25, itemID = 242304, count = 30,
+        text = "香料饼干，材料（大块黄油、香料包）在训练师旁材料商人处购买。制作饼干，直至达到25级" },
+      { from = 26, to = 35, itemID = 242297, count = 10,
+        text = "学习法力百合茶或者血艳蓟茶，制作10个" },
+      { from = 36, to = 100, itemID = 242304, count = 320,
+        text = "继续香料饼干，整个36–100区间大约需要300个，记得买个厨师帽，否则会很费时间" },
+      { from = 36, to = 100, spellID = 1226167, count = 300,
+        materials = { { itemID = 242304, quantity = 5 } },
+        text = "学习丰盛食物，通过该配方转化5份饼干，直至100级，记得不要一次全部做完面包才转化，每次转化5-10份，这样会更经济" },
+    },
+  },
+}

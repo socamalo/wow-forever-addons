@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "daniel-wow": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--with",
+        "mcp",
+        "python",
+        "-I",
+        "/Volumes/Extra/Games/World of Warcraft/_forever_/Interface/AddOns/DanielAddon/tools/daniel_mcp.py"
+      ],
+      "env": {
+        "DANIEL_QUEUE": "/Users/d_d/daniel-markers.json",
+        "DANIEL_MCP_INPUT": "file",
+        "DANIEL_WOW_APP": "World of Warcraft"
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+## Interface: 120105,16001
+## Title: EasyAuction
+## Title-zhCN: EasyAuction - |cff99ddff拍|r|cff88ccee卖|r|cff77bbdd助|r|cff77aaaa手|r
+## Title-zhTW: EasyAuction - |cff99ddff拍|r|cff88ccee賣|r|cff77bbdd助|r|cff77aaaa手|r
+## Notes: Shopping lists, quick selling, profession planning and auction analytics.
+## Notes-zhCN: 购物清单、闪卖、专业规划与拍卖行情分析。
+## Notes-zhTW: 購物清單、快速出售、專業規劃與拍賣行情分析。
+## Author: 黑科研[童]
+## Version: 20261015.1
+## SavedVariables: EasyAuctionDB12
+Locales/Locale.lua
+Locales/zhCN.lua
+Locales/zhTW.lua
+Locales/enUS.lua
+Core/EasyAuctionStyle.lua
+Core/Bootstrap.lua
+Core/Prices.lua
+Core/Store.lua
+Core/API.lua
+Core/AuctionatorCompat.lua
+Data/DefaultLists.lua
+Data/LevelingGuides.lua
+Core/Presets.lua
+Core/RecipeTracker.lua
+Core/Market.lua
+Core/ProfessionSettings.lua
+Core/ProfessionBootstrap.lua
+Core/Professions/Inventory.lua
+Core/Professions/Recipes.lua
+Core/Professions/Economics.lua
+Core/Professions/Guides.lua
+Core/Professions/Queue.lua
+Core/ProfessionAssistant.lua
+Core/ProfessionPosting.lua
+Core/ProfessionEnhancements.lua
+Core/Reset.lua
+UI/Models.lua
+UI/Widgets.lua
+UI/ItemTooltip.lua
+UI/PresetCatalog.lua
+UI/Trend.lua
+UI/TabSkins.lua
+UI/ProfessionAssistant.lua
+UI/ProfessionProfit.lua
+UI/ProfessionQueue.lua
+UI/ProfessionGather.lua
+UI/ProfessionPost.lua
+UI/ProfessionPrices.lua
+UI/ProfessionOverview.lua
+UI/ProfessionSettings.lua
+UI/NativeTabs.lua
+UI/InfoPages.lua
+UI/Workbench.lua
+UI/Minimap.lua
